@@ -33,7 +33,7 @@ const faqData = [
 
 
   return (
-    <section className="relative  max-w-screen    md:h-screen   ">
+    <section className="relative  max-w-screen    md:min-h-screen   ">
       {/* Background Image */}
       <div className="hidden lg:block lg:absolute inset-0 left-0   ">
         <img
