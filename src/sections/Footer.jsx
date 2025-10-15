@@ -53,7 +53,7 @@ const Footer = () => {
     }
     try {
       setLoading(true);
-      const response = await axios.post("https://your-api.com/api/subscribe", {
+      const response = await axios.post("/api/emailMarketingApi.js", {
         email,
       });
       Swal.fire({

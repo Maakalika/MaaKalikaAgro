@@ -24,7 +24,7 @@ function Contact() {
     setLoading(true);
 
     try {
-      const res = await axios.post("/api/contact", formData);
+      const res = await axios.post("/api/contactApi.js", formData);
 
       if (res.data.isSuccess) {
         Swal.fire({
