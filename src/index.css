@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+.font-1 {
+  font-family: "Manrope";
+}
+.font-2 {
+  font-family: "Covered By Your Grace";
+}
+.primary-button {
+  @apply bg-[#4BAF47] hover:bg-[#3a9e3c] rounded-lg text-white px-6 py-3 cursor-pointer  transition-all duration-300;
+  font-family: "Manrope";
+}
+.heading-1{
+  @apply text-white text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-center ;
+  font-family: "Manrope"
+}
+.heading-2 {
+  @apply text-2xl md:text-3xl lg:text-4xl text-[#1F1E17] font-extrabold;
+  font-family: "Manrope";
+}
+
+.heading-3 {
+  @apply text-lg lg:text-xl text-[#1F1E17] font-extrabold;
+  font-family: "Manrope";
+}
+
+.sub-heading-1 {
+  @apply text-[#EEC044] text-xl lg:text-2xl;
+  font-family: "Covered By Your Grace";
+}
+
+.paragraph-1 {
+  @apply text-[#A5A49A] text-base;
+  font-family: "Manrope";
+}
