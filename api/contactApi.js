@@ -182,7 +182,7 @@ const userTemplate = (data) => {
 // HANDLER
 // -------------------------
 const handler = async (req, res) => {
-  if (req.method != "POST"||req.method!="post") {
+  if (req.method !=="POST") {
     return res
       .status(405)
       .json({ isSuccess: false, message: "Only POST allowed" });
