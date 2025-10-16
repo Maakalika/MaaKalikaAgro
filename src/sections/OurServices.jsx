@@ -1,9 +1,9 @@
 import { useRef, useState, useEffect } from "react";
-import SustainableFarmingImgae from "../assets/OurServices/SustainableFarming.jpg"
-import AgriTechImage from "../assets/OurServices/AgriTech.jpeg"
-import OrganicCropProductionImage from "../assets/OurServices/OrganicCropProduction.jpeg"
-import AgroSupplyChainImage from "../assets/OurServices/AgroSupplyChain.jpg"
-import TraningImage from "../assets/OurServices/TrainingFarmer.jpg"
+import SustainableFarmingImgae from "../assets/OurServices/SustainableFarming.jpg";
+import AgriTechImage from "../assets/OurServices/AgriTech.jpeg";
+import OrganicCropProductionImage from "../assets/OurServices/OrganicCropProduction.jpeg";
+import AgroSupplyChainImage from "../assets/OurServices/AgroSupplyChain.jpg";
+import TraningImage from "../assets/OurServices/TrainingFarmer.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTractor } from "@fortawesome/free-solid-svg-icons";
@@ -28,13 +28,13 @@ function OurServices() {
         "Introducing modern tools, irrigation systems, and smart practices for maximum productivity.",
       image: AgriTechImage,
     },
-     {
+    {
       heading: "Agro Supply Chain & Distribution",
       description:
         "Connecting farmers directly with markets for fair pricing and faster delivery.",
       image: AgroSupplyChainImage,
     },
-     {
+    {
       heading: "Training & Farmer Education",
       description:
         "Workshops, awareness programs, and training sessions for modern agricultural innovation.",
@@ -42,7 +42,6 @@ function OurServices() {
     },
   ];
 
-  // store heights for each card
   const [imageHeights, setImageHeights] = useState([]);
   const imageRefs = useRef([]);
 
@@ -53,7 +52,7 @@ function OurServices() {
 
   return (
     <section
-      className="px-6 md:px-20 lg:px-30  py-10 md:py-16 bg-[#F8F7F0] space-y-8"
+      className="px-6 md:px-20 lg:px-30 py-10 md:py-16 bg-[#F8F7F0] space-y-8"
       id="services"
     >
       <header>
@@ -61,25 +60,25 @@ function OurServices() {
         <h2 className="heading-2 text-center">What We Offer</h2>
       </header>
 
-      <section className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {/* ✅ FLEX VERSION */}
+      <section className="flex flex-wrap justify-center gap-10">
         {servicesData.map((data, index) => (
           <div
             key={index}
-            className="relative transition-all duration-300 hover:translate-y-3 cursor-pointer"
+            className="relative transition-all duration-300 hover:translate-y-3 cursor-pointer w-full sm:w-[45%] lg:w-[30%] max-w-sm"
           >
             <img
               ref={(el) => (imageRefs.current[index] = el)}
               src={data.image}
               className="w-full max-h-72 rounded-t-lg"
-              alt=""
+              alt={data.heading}
             />
 
-            <section className="bg-white shadow-md p-6 space-y-2 rounded-b-lg mt-0  h-44">
+            <section className="bg-white shadow-md p-6 space-y-2 rounded-b-lg mt-0 h-44">
               <h2 className="heading-3">{data.heading}</h2>
               <p className="paragraph-1">{data.description}</p>
             </section>
 
-            {/* Button positioned based on image height */}
             <button
               className="absolute right-4 bg-[#C5CE38] text-white p-3 rounded-lg shadow-md"
               style={{
